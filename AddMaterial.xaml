@@ -1,0 +1,40 @@
+﻿<Window x:Class="WpfApp1.AddMaterial"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Добавление материала" Height="500" Width="550" WindowStartupLocation="CenterScreen"
+        Icon="/Images/Мастер пол.ico">
+    <Grid>
+        <Label Content="Тип материала" HorizontalAlignment="Left" Margin="54,24,0,0" VerticalAlignment="Top"/>
+        <TextBox PreviewTextInput="TbPrice_PreviewTextInput" x:Name="TbPrice" HorizontalAlignment="Left" Margin="235,74,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="239"/>
+        <ComboBox x:Name="CbMaterialType" SelectedIndex="0" HorizontalAlignment="Left" Margin="235,34,0,0" VerticalAlignment="Top" Width="239">
+            <ComboBoxItem Content="Дерево"/>
+            <ComboBoxItem Content="Текстиль"/>
+            <ComboBoxItem Content="Стекло"/>
+            <ComboBoxItem Content="Металл"/>
+            <ComboBoxItem Content="Пластик"/>
+        </ComboBox>
+        <Label Content="Цена единицы" HorizontalAlignment="Left" Margin="54,70,0,0" VerticalAlignment="Top"/>
+        <Label Content="Единица измерения" HorizontalAlignment="Left" Margin="54,145,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="CbUnit" SelectedIndex="0" HorizontalAlignment="Left" Margin="235,149,0,0" VerticalAlignment="Top" Width="239">
+            <ComboBoxItem Content="м²"/>
+            <ComboBoxItem Content="пог.м"/>
+            <ComboBoxItem Content="шт"/>
+            <ComboBoxItem Content="м"/>
+        </ComboBox>
+        <Label Content="Количество в упаковке" HorizontalAlignment="Left" Margin="54,186,0,0" VerticalAlignment="Top"/>
+        <TextBox PreviewTextInput="TbPackageQuantity_PreviewTextInput" x:Name="TbPackageQuantity" HorizontalAlignment="Left" Margin="235,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="239"/>
+        <Label Content="Количество на складе" HorizontalAlignment="Left" Margin="54,219,0,0" VerticalAlignment="Top"/>
+        <TextBox PreviewTextInput="TbStockQuantity_PreviewTextInput"  x:Name="TbStockQuantity" HorizontalAlignment="Left" Margin="235,227,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="239"/>
+        <Label Content="Минимальное количество" HorizontalAlignment="Left" Margin="54,259,0,0" VerticalAlignment="Top"/>
+        <TextBox PreviewTextInput="TbMinQuantity_PreviewTextInput"  x:Name="TbMinQuantity" HorizontalAlignment="Left" Margin="235,263,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="239"/>
+        <Button x:Name="BtnAddMaterial" Content="Добавить" HorizontalAlignment="Left" Margin="60,316,0,0" VerticalAlignment="Top" Height="75" Width="114" Click="BtnAddMaterial_Click"/>
+        <Button x:Name="BtnBack" Content="Назад" HorizontalAlignment="Left" Margin="208,316,0,0" VerticalAlignment="Top" Height="75" Width="114" Click="BtnBack_Click"/>
+        <Button x:Name="BtnExit" Content="Выход" HorizontalAlignment="Left" Margin="360,316,0,0" VerticalAlignment="Top" Height="75" Width="114" Click="BtnExit_Click"/>
+        <Label Content="Наименование материала" HorizontalAlignment="Left" Margin="54,105,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TbMaterialTitle" PreviewTextInput="TbMaterialTitle_PreviewTextInput" HorizontalAlignment="Left" Margin="235,109,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="239"/>
+    </Grid>
+</Window>

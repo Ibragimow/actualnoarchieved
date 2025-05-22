@@ -1,0 +1,15 @@
+﻿<Window x:Class="WpfApp1.StartUpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Главная страница" Height="200" Width="420" WindowStartupLocation="CenterScreen"
+        Icon="/Images/Мастер пол.ico">
+    <Grid>
+        <Button x:Name="BtnAddMaterial" Content="Добавить" HorizontalAlignment="Left" Margin="35,46,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.883,-3.004" Height="83" Width="95" Click="BtnAddMaterial_Click"/>
+        <Button x:Name="BtnAllMaterials" Content="Просмотреть" HorizontalAlignment="Left" Margin="165,46,0,0" VerticalAlignment="Top" Height="83" Width="90" Click="BtnAllMaterials_Click"/>
+        <Button x:Name="BtnExit" Content="Закрыть" HorizontalAlignment="Left" Margin="295,46,0,0" VerticalAlignment="Top" Height="83" Width="90" Click="BtnExit_Click"/>
+    </Grid>
+</Window>
