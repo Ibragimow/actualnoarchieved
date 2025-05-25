@@ -46,6 +46,10 @@
                                     <Run Text=" | "/>
                                     <Run Text="{Binding PackageQuantity}"/>
                                 </TextBlock>
+                                <TextBlock>
+                                    <Run Text="Требуемое количество: "/>
+                                    <Run Text="{Binding NeededQuantity}"/>
+                                </TextBlock> 
                             </StackPanel>
                         </Border>
                     </DataTemplate>

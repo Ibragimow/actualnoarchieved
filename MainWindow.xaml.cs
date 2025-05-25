@@ -26,6 +26,7 @@ namespace WpfApp1
             var context = new ObrazPlusIbragimov();
             {
                 var materialCards = context.Materials
+                    .AsEnumerable()
                     .Select(x => new MaterialCard
                     {
                         Type = x.Type,
@@ -34,7 +35,7 @@ namespace WpfApp1
                         StockQuantity = x.StockQuantity.ToString(),
                         PriceAndUnit = x.Price.ToString() + " / " + x.Unit,
                         PackageQuantity = x.PackageQuantity.ToString(),
-                        //NeededQuantity = (x.MinQuantity(Convert.ToInt32).Sum()
+                        NeededQuantity = ((double)x.StockQuantity / (double)x.PackageQuantity).ToString("F2")
                     })
                     .ToList();  
                 MaterialList.ItemsSource = materialCards;    
@@ -50,7 +51,7 @@ namespace WpfApp1
             public string StockQuantity { get; set; }
             public string PriceAndUnit { get; set; }
             public string PackageQuantity { get; set; }
-            public float NeededQuantity { get; set; }
+            public string NeededQuantity { get; set; }
         }
 
         private void BtnExit_Click(object sender, RoutedEventArgs e)
