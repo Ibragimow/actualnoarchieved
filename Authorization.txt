@@ -1,0 +1,32 @@
+namespace Test1Ibragimov
+{
+    /// <summary>
+    /// Логика взаимодействия для Authorization.xaml
+    /// </summary>
+    public partial class Authorization : Window
+    {
+        public Authorization()
+        {
+            InitializeComponent();
+        }
+
+        private void BtnEnter_Click(object sender, RoutedEventArgs e)
+        {
+            string login = UserLog.Text;
+            string password = UserPass.Password;
+            using (var db = new TestOneIbragimovDB())
+            {
+                var user = db.Users.FirstOrDefault(u => u.UserLogin == login && u.UserPassword == password);
+                    if (user != null)
+                {
+                    MessageBox.Show("Вы вошли");
+                }
+                    else
+                {
+                    MessageBox.Show("Вы не вошли");
+                }
+            }
+
+
+        }
+    }
